@@ -7,7 +7,7 @@ module BodyFatCalc
 
 
     def body_fat
-      if conversion == :bozek
+      if @conversion == :brozek
         return body_fat_brozek
       else 
         return body_fat_siri
