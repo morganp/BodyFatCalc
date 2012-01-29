@@ -5,19 +5,18 @@ module BodyFatCalc
       @measurments = measurments
     end
 
-    def validate
-      errors = []
+    def valid?
+      errors       = []
+      requirements = ['weight', 'height']
 
-      if @measurments.weight.nil?
-        errors << "weight"
-      end
-
-      if @measurments.height.nil?
-        errors << "height"
+      requirements.each do |measurment|
+        unless @measurments.respond_to?( measurment )
+          errors << measurment
+        end
       end
 
       if errors.any?
-        $stderr.puts "BMI requires " + errors.join(', ')
+        $stderr.puts "BMI is missing " + errors.join(', ')
       end
 
       return errors.empty?
@@ -25,7 +24,7 @@ module BodyFatCalc
 
 
     def body_fat
-      if validate
+      if valid?
         ( @measurments.weight.to_f / ( @measurments.height**2 ) )
       else
         -1
