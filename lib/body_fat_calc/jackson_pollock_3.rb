@@ -25,6 +25,7 @@ module BodyFatCalc
     end
 
     def body_density
+      # Male Constants
       constant_x    = 1.10938
       sum_constant  = 0.0008267
       sum2_constant = 0.0000016
