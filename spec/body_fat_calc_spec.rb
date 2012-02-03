@@ -37,9 +37,12 @@ describe BodyFatCalc do
     measurments.jackson_pollock_3.should        be_within( DELTA ).of( 29.44 )
     measurments.jackson_pollock_3_brozek.should be_within( DELTA ).of( 29.44 )
     measurments.jackson_pollock_3_siri.should   be_within( DELTA ).of( 30.53 )
-    #measurments.parillio_9.should               < 0
+
     # Not enough points for Jackson Pollock 7 so it fails
      measurments.jackson_pollock_7.should       < 0
+
+    # Not enough points for Parillio9 so it fails
+    measurments.parillio_9.should               < 0
   end
 
   it " Jackson Pollock 3 Male Only " do
@@ -58,6 +61,11 @@ describe BodyFatCalc do
 
     # Not enough points for Jackson Pollock 7 so it fails
      measurments.jackson_pollock_7.should       < 0
+
+    # Not enough points for Parillio9 so it fails
+    measurments.parillio_9.should               < 0
+  end
+
   it " All Calculations, Male Only " do
     measurments = BodyFatCalc::Measurments.new({
       :sex         => 'male',
