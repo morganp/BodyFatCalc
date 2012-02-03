@@ -30,6 +30,11 @@ module BodyFatCalc
       def jackson_pollock_3_siri
         JacksonPollock3.new( self, :siri ).body_fat
       end
+
+      def jackson_pollock_7
+        JacksonPollock7.new( self ).body_fat
+      end
+
       def parillio_9
         Parillio9.new( self ).body_fat
       end

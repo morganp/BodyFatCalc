@@ -38,6 +38,8 @@ describe BodyFatCalc do
     measurments.jackson_pollock_3_brozek.should be_within( DELTA ).of( 29.44 )
     measurments.jackson_pollock_3_siri.should   be_within( DELTA ).of( 30.53 )
     #measurments.parillio_9.should               < 0
+    # Not enough points for Jackson Pollock 7 so it fails
+     measurments.jackson_pollock_7.should       < 0
   end
 
   it " Jackson Pollock 3 Male Only " do
@@ -53,6 +55,33 @@ describe BodyFatCalc do
     measurments.jackson_pollock_3.should        be_within( DELTA ).of( 21.14 )
     measurments.jackson_pollock_3_brozek.should be_within( DELTA ).of( 21.14 )
     measurments.jackson_pollock_3_siri.should   be_within( DELTA ).of( 21.54 ) 
+
+    # Not enough points for Jackson Pollock 7 so it fails
+     measurments.jackson_pollock_7.should       < 0
+  it " All Calculations, Male Only " do
+    measurments = BodyFatCalc::Measurments.new({
+      :sex         => 'male',
+      :weight      => 111.5,
+      :height      => 1.8,
+      :age         => 28,
+      :chest       => 21,
+      :midaxillary => 24,
+      :bicep       => 7,
+      :abdominal   => 47,
+      :supailiac   => 29,
+      :thigh       => 43,
+      :calf        => 32,
+      :subscapular => 21,
+      :tricep      => 18,
+      :lowerback   => 44
+    })
+
+    measurments.bmi.should                      be_within( DELTA ).of( 34.41 )
+    measurments.jackson_pollock_3.should        be_within( DELTA ).of( 29.44 )
+    measurments.jackson_pollock_3_brozek.should be_within( DELTA ).of( 29.44 )
+    measurments.jackson_pollock_3_siri.should   be_within( DELTA ).of( 30.53 ) 
+    measurments.jackson_pollock_7.should        be_within( DELTA ).of( 26.75 )
+    measurments.parillio_9.should               be_within( DELTA ).of( 28.97 )
   end
 end
 
