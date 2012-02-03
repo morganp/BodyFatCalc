@@ -1,6 +1,8 @@
 
 require 'spec_helper'
 
+DELTA = 0.005
+
 describe BodyFatCalc do
   it " Fail nicely when no data supplied " do
     measurments = BodyFatCalc::Measurments.new({
@@ -31,10 +33,10 @@ describe BodyFatCalc do
       :thigh     => 43
     })
 
-    measurments.bmi.should                      == 34.413580246913575
-    measurments.jackson_pollock_3.should        == 29.43647165526979
-    measurments.jackson_pollock_3_brozek.should == 29.43647165526979
-    measurments.jackson_pollock_3_siri.should   == 30.52528111457019
+    measurments.bmi.should                      be_within( DELTA ).of( 34.41 )
+    measurments.jackson_pollock_3.should        be_within( DELTA ).of( 29.44 )
+    measurments.jackson_pollock_3_brozek.should be_within( DELTA ).of( 29.44 )
+    measurments.jackson_pollock_3_siri.should   be_within( DELTA ).of( 30.53 )
     #measurments.parillio_9.should               < 0
   end
 
@@ -48,9 +50,9 @@ describe BodyFatCalc do
     })
 
     measurments.bmi.should                      == -1
-    measurments.jackson_pollock_3.should        == 21.13818155907463
-    measurments.jackson_pollock_3_brozek.should == 21.13818155907463
-    measurments.jackson_pollock_3_siri.should   == 21.536980025693595 
+    measurments.jackson_pollock_3.should        be_within( DELTA ).of( 21.14 )
+    measurments.jackson_pollock_3_brozek.should be_within( DELTA ).of( 21.14 )
+    measurments.jackson_pollock_3_siri.should   be_within( DELTA ).of( 21.54 ) 
   end
 end
 
