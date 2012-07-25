@@ -29,18 +29,27 @@ Formula Measurment Requirments
 |:----------:|:---:|:-----------------:|:-----------------:|:----------:|
 | Weight     |  Y  |                   |                   |      Y     |
 | Height     |  Y  |                   |                   |            |
-| Chest      |     |         Y         |         Y         |      Y     |
-| Bicep      |     |                   |                   |      Y     |
-| Tricep     |     |                   |         Y         |      Y     |
-| Supailiac  |     |                   |         Y         |      Y     |
-| Subscapular|     |                   |         Y         |      Y     |
-| Midaxillary|     |                   |         Y         |            |
-| Abdominal  |     |         Y         |         Y         |      Y     |
-| Lowerback  |     |                   |                   |      Y     |
-| Thigh      |     |         Y         |         Y         |      Y     |
-| Calf       |     |                   |                   |      Y     |
+| [Chest][]      |     |         Y         |         Y         |      Y     |
+| [Bicep][]      |     |                   |                   |      Y     |
+| [Tricep][]     |     |                   |         Y         |      Y     |
+| [Supailiac][]  |     |                   |         Y         |      Y     |
+| [Subscapular][]|     |                   |         Y         |      Y     |
+| [Midaxillary][]|     |                   |         Y         |            |
+| [Abdominal][]  |     |         Y         |         Y         |      Y     |
+| [Lowerback][]  |     |                   |                   |      Y     |
+| [Thigh][]      |     |         Y         |         Y         |      Y     |
+| [Calf][]       |     |                   |                   |      Y     |
 
-
+[Chest]: http://www.topendsports.com/testing/skinfold-chest.htm
+[Bicep]: http://www.topendsports.com/testing/skinfold-bicep.htm
+[Tricep]: http://www.topendsports.com/testing/skinfold-tricep.htm
+[Supailiac]: http://www.topendsports.com/testing/skinfold-supraspinale.htm
+[Subscapular]: http://www.topendsports.com/testing/skinfold-subscapular.htm
+[Midaxillary]: http://www.topendsports.com/testing/skinfold-axilla.htm
+[Abdominal]: http://www.topendsports.com/testing/skinfold-abdominal.htm
+[Lowerback]: http://www.topendsports.com/testing/skinfold-lower-back.htm
+[Thigh]: http://www.topendsports.com/testing/skinfold-front-thigh.htm
+[Calf]: http://www.topendsports.com/testing/skinfold-medial-calf.htm
 
 EXAMPLES
 ========
