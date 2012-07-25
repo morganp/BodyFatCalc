@@ -1,7 +1,6 @@
 
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib")
-require 'body_fat_calc'
+require './lib/body_fat_calc'
 
 Gem::Specification.new do |s|
   s.name        = 'body_fat_calc'
