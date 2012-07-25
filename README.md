@@ -22,6 +22,17 @@ Formula for Pollock 3/7 from [rohan][], [gain-weight-muscle-fast][].
 
 [gain-weight-muscle-fast]: http://www.gain-weight-muscle-fast.com/skinfold-measurements.html
 
+Formula Measurment Requirments
+==
+
+|: Measurment :|: BMI :|: Jackson Pollock 3 :|: Jackson Pollock 7 :|: Parillio 9 :| 
+|:-:|:-:|:-:|:-:|:-:|
+| Weight  | Y  |   |   |   |
+| Height  | Y  |   |   |   |
+| Chest   |    | Y |   |   |
+| Abdominal   |    | Y |   |   |
+| Thigh   |    | Y |   |   |
+
 
 
 EXAMPLES
