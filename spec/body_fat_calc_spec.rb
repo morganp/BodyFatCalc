@@ -9,6 +9,7 @@ describe BodyFatCalc do
     })
     measurments.bmi.should                      < 0
     measurments.jackson_pollock_3.should        < 0
+    measurments.jackson_pollock_7.should        < 0
     measurments.parillio_9.should               < 0
   end
   
@@ -18,6 +19,7 @@ describe BodyFatCalc do
     })
     measurments.bmi.should                      < 0
     measurments.jackson_pollock_3.should        < 0
+    measurments.jackson_pollock_7.should        < 0
     measurments.parillio_9.should               < 0
   end
   

@@ -9,7 +9,6 @@ module BodyFatCalc
     def valid?
       errors      = []
       requirements = [
-        'weight', 
         'chest',       'abdominal', 
         'supailiac',   'thigh',
         'subscapular', 'tricep', 

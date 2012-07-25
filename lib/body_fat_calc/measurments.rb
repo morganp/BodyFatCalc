@@ -14,6 +14,22 @@ require 'ostruct'
 module BodyFatCalc
   class Measurments < OpenStruct
 
+      def male?
+        if respond_to?( :sex )
+          sex.downcase == 'male'
+        else 
+          false
+        end
+      end
+
+      def female?
+        #(not male?)
+        if respond_to?( :sex )
+          sex.downcase == 'female'
+        else 
+          false
+        end
+      end
 
       def bmi
         BMI.new( self ).body_fat

@@ -5,12 +5,34 @@ module BodyFatCalc
       @conversion  = conversion
     end
 
+    def valid?
+      errors      = []
+      requirements = [
+        'chest',       'abdominal',   'thigh',
+      ]
+
+      requirements.each do |measurment|
+        unless @measurments.respond_to?( measurment )
+          errors << measurment
+        end
+      end
+
+      if errors.any?
+        $stderr.puts "Jackson Pollock 3 is missing " + errors.join(', ')
+      end
+
+      return errors.empty?
+    end
 
     def body_fat
-      if @conversion == :brozek
-        return body_fat_brozek
+      if valid?
+        if @conversion == :brozek
+          return body_fat_brozek
+        else 
+          return body_fat_siri
+        end
       else 
-        return body_fat_siri
+        -1
       end
     end
 
@@ -26,18 +48,26 @@ module BodyFatCalc
 
     def body_density
       # Male Constants
-      constant_x    = 1.10938
-      sum_constant  = 0.0008267
-      sum2_constant = 0.0000016
-      age_constant  = 0.0002574
+      if @measurments.male?
+        constant_x    = 1.10938
+        sum_constant  = 0.0008267
+        sum2_constant = 0.0000016
+        age_constant  = 0.0002574
+      else
+        constant_x    = 1.0994921
+        sum_constant  = 0.0009929
+        sum2_constant = 0.0000023
+        age_constant  = 0.0001392
+      end
+
 
       density = constant_x - (sum_constant * sum) + (sum2_constant * sum**2) - (age_constant * @measurments.age.to_i)
     end
-    
+
     def sum
       @measurments.chest.to_i + @measurments.abdominal.to_i + @measurments.thigh.to_i
     end
-    
+
   end
 end
 
