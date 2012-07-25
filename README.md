@@ -25,13 +25,20 @@ Formula for Pollock 3/7 from [rohan][], [gain-weight-muscle-fast][].
 Formula Measurment Requirments
 ==
 
-|: Measurment :|: BMI :|: Jackson Pollock 3 :|: Jackson Pollock 7 :|: Parillio 9 :| 
-|:-:|:-:|:-:|:-:|:-:|
-| Weight  | Y  |   |   |   |
-| Height  | Y  |   |   |   |
-| Chest   |    | Y |   |   |
-| Abdominal   |    | Y |   |   |
-| Thigh   |    | Y |   |   |
+| Measurment | BMI | Jackson Pollock 3 | Jackson Pollock 7 | Parillio 9 | 
+|:----------:|:---:|:-----------------:|:-----------------:|:----------:|
+| Weight     |  Y  |                   |                   |      Y     |
+| Height     |  Y  |                   |                   |            |
+| Chest      |     |         Y         |         Y         |      Y     |
+| Bicep      |     |                   |                   |      Y     |
+| Tricep     |     |                   |         Y         |      Y     |
+| Supailiac  |     |                   |         Y         |      Y     |
+| Subscapular|     |                   |         Y         |      Y     |
+| Midaxillary|     |                   |         Y         |            |
+| Abdominal  |     |         Y         |         Y         |      Y     |
+| Lowerback  |     |                   |                   |      Y     |
+| Thigh      |     |         Y         |         Y         |      Y     |
+| Calf       |     |                   |                   |      Y     |
 
 
 
